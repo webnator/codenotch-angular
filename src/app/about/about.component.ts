@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
+  autor_nombre = 'Williams';
+  autor_apellido = 'Aguilera';
+  autor_bio = 'Developer since 1989!';
 
   constructor() { }
 
