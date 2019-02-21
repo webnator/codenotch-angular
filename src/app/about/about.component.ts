@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { Autor } from '../autor';
 
 @Component({
   selector: 'app-about',
@@ -7,13 +8,24 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  autor_nombre = environment.autor_nombre;
-  autor_apellido = environment.autor_apellido;
-  autor_bio = environment.autor_bio;
+  private autorInfo: Autor = {
+    nombre: environment.autor_nombre,
+    apellido: environment.autor_apellido,
+    bio: environment.autor_bio,
+  }
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  autor(): Autor {
+    return this.autorInfo;
+  }
+
+  nombreCompleto(autor: Autor): String {
+    return autor.nombre + ' ' + autor.apellido;
+  }
+
 
 }

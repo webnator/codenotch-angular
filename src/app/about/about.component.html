@@ -1,5 +1,6 @@
 
   <h1>Autor: </h1>
-  <div>Nombre: <span>{{ autor_nombre }}</span></div>
-  <div>Apellido: <span>{{ autor_apellido }}</span></div>
-  <div>Bio: <span>{{ autor_bio }}</span></div>
+  <div>Nombre: <span>{{ autor().nombre }}</span></div>
+  <div>Apellido: <span>{{ autor().apellido }}</span></div>
+  <div>Bio: <span>{{ autor().bio }}</span></div>
+  <div>Mi nombre completo: <span>{{ nombreCompleto(autor()) }}</span></div>
