@@ -1,21 +1,4 @@
 <div>
   <h1>Ciudades</h1>
-
-  <div>
-    codigo: <input #codigo><br/>
-    oleaje: <input #oleaje><br/>
-    periodo: <input #periodo><br/>
-    velocidad: <input #velocidad><br/>
-    direccion: <input #direccion><br/>
-    <button (click)="guardarClima(codigo.value, oleaje.value, periodo.value, velocidad.value, direccion.value)">Añadir</button>
-
-  </div>
-
-  <app-ciudad [ciudad]="ciudades[0]"></app-ciudad>
-  <app-ciudad [ciudad]="ciudades[1]"></app-ciudad>
-  <app-ciudad [ciudad]="ciudades[2]"></app-ciudad>
-  <app-ciudad [ciudad]="ciudades[3]"></app-ciudad>
-  <app-ciudad [ciudad]="ciudades[4]"></app-ciudad>
-  <app-ciudad [ciudad]="ciudades[5]"></app-ciudad>
-
+  <app-ciudad *ngFor="let ciudad of ciudades" [ciudad]="ciudad"></app-ciudad>
 </div>

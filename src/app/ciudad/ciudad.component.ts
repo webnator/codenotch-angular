@@ -10,10 +10,13 @@ import { ClimaCiudad } from '../services/info-clima/clima';
 })
 export class CiudadComponent implements OnInit {
   @Input() ciudad: Ciudad;
+  public clima: ClimaCiudad;
+  public mostrarEdicion = false;
 
   constructor(private infoClimaService: InfoClimaService) { }
 
   ngOnInit() {
+    this.clima = this.infoClimaService.obtenerClima(this.ciudad.codigo);
   }
 
   public cambiarNombre(nombre: string): void {
@@ -22,13 +25,8 @@ export class CiudadComponent implements OnInit {
     }
   }
 
-  public mostrarClima(codigo: string): void {
-    const infoClima = this.infoClimaService.obtenerClima(codigo);
-    alert(JSON.stringify(infoClima));
-  }
-
-  public obtenerClima(codigo: string): ClimaCiudad {
-    return this.infoClimaService.obtenerClima(codigo);
+  public editar(): void {
+    this.mostrarEdicion = !this.mostrarEdicion;
   }
 
 }

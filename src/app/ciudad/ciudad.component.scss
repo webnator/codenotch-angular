@@ -26,3 +26,12 @@
   cursor: pointer;
   border: 1px solid gold;
 }
+
+.incomplete {
+  background-color: brown;
+  cursor: default;
+}
+.incomplete:hover {
+  background-color: brown;
+  cursor: default;
+}

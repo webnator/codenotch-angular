@@ -1,10 +1,13 @@
-<div class="ciudad-item" (click)="mostrarClima(ciudad.codigo)">
-  <h3>{{ ciudad.nombre | encomillar }} - <i>{{ ciudad.pais | uppercase | encomillar | encomillar | encomillar }}</i></h3>
-  {{ obtenerClima(ciudad.codigo) | json }}
-  <div>
-    Viento: {{ obtenerClima(ciudad.codigo) | windDirection }}
+<div class="ciudad-item" [ngClass]="!clima.clima.oleaje ? 'incomplete' : ''">
+  <h3>
+    {{ ciudad.nombre | encomillar }} - <i>{{ ciudad.pais | uppercase }}</i>
+    <button (click)="editar()">{{ mostrarEdicion ? 'Ocultar' : 'Editar'}} </button>
+  </h3>
+  <div *ngIf="clima.clima.viento.velocidad">
+    Viento: {{ clima | windDirection }}
   </div>
-  <div>
+
+  <div *ngIf="mostrarEdicion">
       Nuevo nombre: <input #nombre>
       <button (click)="cambiarNombre(nombre.value)">Cambiar</button>
     </div>
