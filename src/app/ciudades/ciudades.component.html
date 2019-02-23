@@ -1,0 +1,10 @@
+<div>
+  <h1>Ciudades:</h1>
+  <button>{{ ciudades[0].nombre }}</button>
+  <input type="text" value="{{ ciudades[0].nombre }}">
+
+  <input [(ngModel)]="ciudades[0].nombre">
+
+  <br/><br/>
+  Nuevo nombre: <input #nombre (keyup)="cambiarNombre(nombre.value)">
+</div>
