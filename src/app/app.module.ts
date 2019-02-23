@@ -8,6 +8,7 @@ import { CiudadesComponent } from './ciudades/ciudades.component';
 import { FormsModule } from '@angular/forms';
 import { CiudadComponent } from './ciudad/ciudad.component';
 import { EncomillarPipe } from './encomillar.pipe';
+import { WindDirectionPipe } from './wind-direction.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { EncomillarPipe } from './encomillar.pipe';
     AboutComponent,
     CiudadesComponent,
     CiudadComponent,
-    EncomillarPipe
+    EncomillarPipe,
+    WindDirectionPipe
   ],
   imports: [
     BrowserModule,

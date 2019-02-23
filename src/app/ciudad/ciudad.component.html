@@ -2,6 +2,9 @@
   <h3>{{ ciudad.nombre | encomillar }} - <i>{{ ciudad.pais | uppercase | encomillar | encomillar | encomillar }}</i></h3>
   {{ obtenerClima(ciudad.codigo) | json }}
   <div>
+    Viento: {{ obtenerClima(ciudad.codigo) | windDirection }}
+  </div>
+  <div>
       Nuevo nombre: <input #nombre>
       <button (click)="cambiarNombre(nombre.value)">Cambiar</button>
     </div>
