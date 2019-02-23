@@ -1,0 +1,7 @@
+<div class="ciudad-item">
+  <h3>{{ ciudad.nombre }} - <i>{{ ciudad.pais }}</i></h3>
+  <span>
+      Nuevo nombre: <input #nombre>
+      <button (click)="cambiarNombre(nombre.value)">Cambiar</button>
+    </span>
+</div>

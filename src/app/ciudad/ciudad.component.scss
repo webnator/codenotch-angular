@@ -1,0 +1,28 @@
+.ciudad-item {
+  background-color: cadetblue;
+  padding: 10px;
+  color: azure;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 3px 6px 12px -6px rgba(0,0,0,0.75);
+  margin: 10px 0px;
+  width: 21%;
+}
+
+.ciudad-item:hover {
+  background-color: cornflowerblue;
+}
+
+.ciudad-item h3 {
+  color: gold;
+  margin-top: 6px;
+}
+
+.ciudad-item button {
+  background-color: darkred;
+  color: white;
+  padding: 5px;
+  margin: 0px 6px;
+  cursor: pointer;
+  border: 1px solid gold;
+}

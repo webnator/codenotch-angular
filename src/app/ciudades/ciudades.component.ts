@@ -9,18 +9,16 @@ import { Ciudad } from './ciudad';
 export class CiudadesComponent implements OnInit {
   ciudades: Ciudad[] = [
     { nombre: 'Sagres', pais: 'Portugal', codigo: 'SAG' },
-    { nombre: 'Somo', pais: 'España', codigo: 'SOM' }
+    { nombre: 'Somo', pais: 'España', codigo: 'SOM' },
+    { nombre: 'Ericeira', pais: 'Portugal', codigo: 'ERI' },
+    { nombre: 'Cadiz', pais: 'España', codigo: 'CAD' },
+    { nombre: 'Tarifa', pais: 'España', codigo: 'TAR' },
+    { nombre: 'Sidney', pais: 'Australia', codigo: 'SID' }
   ];
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  public cambiarNombre(indice: number, nombre: string): void {
-    if (nombre !== 'Madrid') {
-      this.ciudades[indice].nombre = nombre;
-    }
   }
 
 }

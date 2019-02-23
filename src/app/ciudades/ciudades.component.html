@@ -1,19 +1,11 @@
 <div>
-  <h1>Ciudades:</h1>
+  <h1>Ciudades</h1>
 
-  <div class="ciudad-item">
-    <h3>{{ ciudades[0].nombre }}</h3>
-    <span>
-      Nuevo nombre: <input #nombre0>
-      <button (click)="cambiarNombre(0, nombre0.value)">Cambiar</button>
-    </span>
-  </div>
-  <div class="ciudad-item">
-    <h3>{{ ciudades[1].nombre }}</h3>
-    <span>
-      Nuevo nombre: <input #nombre1>
-      <button (click)="cambiarNombre(1, nombre1.value)">Cambiar</button>
-    </span>
-  </div>
+  <app-ciudad [ciudad]="ciudades[0]"></app-ciudad>
+  <app-ciudad [ciudad]="ciudades[1]"></app-ciudad>
+  <app-ciudad [ciudad]="ciudades[2]"></app-ciudad>
+  <app-ciudad [ciudad]="ciudades[3]"></app-ciudad>
+  <app-ciudad [ciudad]="ciudades[4]"></app-ciudad>
+  <app-ciudad [ciudad]="ciudades[5]"></app-ciudad>
 
 </div>
