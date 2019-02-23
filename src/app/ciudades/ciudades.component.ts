@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Ciudad } from './ciudad';
+import { ClimaCiudad, DireccionViento } from '../services/info-clima/clima';
+import { InfoClimaService } from '../services/info-clima/info-clima.service';
 
 @Component({
   selector: 'app-ciudades',
@@ -16,9 +18,24 @@ export class CiudadesComponent implements OnInit {
     { nombre: 'Sidney', pais: 'Australia', codigo: 'SID' }
   ];
 
-  constructor() { }
+  constructor(private infoClimaService: InfoClimaService) { }
 
   ngOnInit() {
+  }
+
+  public guardarClima(codigo: string, oleaje: number, periodo: number, velocidad: number, direccion: DireccionViento): void {
+    const clima: ClimaCiudad = {
+      codigo,
+      clima: {
+        oleaje,
+        periodo,
+        viento: {
+          velocidad,
+          direccion
+        }
+      }
+    };
+    this.infoClimaService.agregarClima(clima);
   }
 
 }
