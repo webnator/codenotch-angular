@@ -1,10 +1,19 @@
 <div>
   <h1>Ciudades:</h1>
-  <button>{{ ciudades[0].nombre }}</button>
-  <input type="text" value="{{ ciudades[0].nombre }}">
 
-  <input [(ngModel)]="ciudades[0].nombre">
+  <div class="ciudad-item">
+    <h3>{{ ciudades[0].nombre }}</h3>
+    <span>
+      Nuevo nombre: <input #nombre0>
+      <button (click)="cambiarNombre(0, nombre0.value)">Cambiar</button>
+    </span>
+  </div>
+  <div class="ciudad-item">
+    <h3>{{ ciudades[1].nombre }}</h3>
+    <span>
+      Nuevo nombre: <input #nombre1>
+      <button (click)="cambiarNombre(1, nombre1.value)">Cambiar</button>
+    </span>
+  </div>
 
-  <br/><br/>
-  Nuevo nombre: <input #nombre (keyup)="cambiarNombre(nombre.value)">
 </div>
