@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Ciudad } from '../ciudades/ciudad';
 import { InfoClimaService } from '../services/info-clima/info-clima.service';
+import { ClimaCiudad } from '../services/info-clima/clima';
 
 @Component({
   selector: 'app-ciudad',
@@ -24,6 +25,10 @@ export class CiudadComponent implements OnInit {
   public mostrarClima(codigo: string): void {
     const infoClima = this.infoClimaService.obtenerClima(codigo);
     alert(JSON.stringify(infoClima));
+  }
+
+  public obtenerClima(codigo: string): ClimaCiudad {
+    return this.infoClimaService.obtenerClima(codigo);
   }
 
 }

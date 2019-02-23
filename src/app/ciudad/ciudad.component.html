@@ -1,7 +1,8 @@
 <div class="ciudad-item" (click)="mostrarClima(ciudad.codigo)">
-  <h3>{{ ciudad.nombre }} - <i>{{ ciudad.pais }}</i></h3>
-  <span>
+  <h3>{{ ciudad.nombre | encomillar }} - <i>{{ ciudad.pais | uppercase | encomillar | encomillar | encomillar }}</i></h3>
+  {{ obtenerClima(ciudad.codigo) | json }}
+  <div>
       Nuevo nombre: <input #nombre>
       <button (click)="cambiarNombre(nombre.value)">Cambiar</button>
-    </span>
+    </div>
 </div>

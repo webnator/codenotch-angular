@@ -7,13 +7,15 @@ import { AboutComponent } from './about/about.component';
 import { CiudadesComponent } from './ciudades/ciudades.component';
 import { FormsModule } from '@angular/forms';
 import { CiudadComponent } from './ciudad/ciudad.component';
+import { EncomillarPipe } from './encomillar.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     CiudadesComponent,
-    CiudadComponent
+    CiudadComponent,
+    EncomillarPipe
   ],
   imports: [
     BrowserModule,
