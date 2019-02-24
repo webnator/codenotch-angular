@@ -1,0 +1,22 @@
+.temperatura {
+  display: block;
+  width: 20%;
+  background-color: antiquewhite;
+  padding: 20px;
+
+  .info {
+    width: 80%;
+    display: inline-block;
+    vertical-align: middle;
+    span {
+      display: block;
+      position: relative;
+    }
+  }
+
+  img {
+    width: 20%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

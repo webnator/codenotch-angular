@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Ciudad } from '../../ciudades/ciudad';
-import {Observable} from "rxjs/index";
+import { Observable } from 'rxjs/index';
 
 @Injectable({
   providedIn: 'root'
@@ -35,7 +35,7 @@ export class CiudadesService {
           observer.complete();
           clearInterval(int);
         }
-      }, 500);
+      }, 100);
       // this.ciudades.forEach(ciudad => observer.next(ciudad));
       // observer.complete();
 

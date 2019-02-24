@@ -15,14 +15,9 @@ export class CiudadesComponent implements OnInit {
   constructor(private infoClimaService: InfoClimaService, private ciudadesService: CiudadesService) { }
 
   ngOnInit() {
-    let index = 0;
-    const sub = this.ciudadesService.obtenerCiudades().subscribe({
+    this.ciudadesService.obtenerCiudades().subscribe({
       next: (ciudad) => {
-        if (index === 3) {
-          return sub.unsubscribe();
-        }
         this.ciudades.push(ciudad);
-        index += 1;
       }
     });
   }

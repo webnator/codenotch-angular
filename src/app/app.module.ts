@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { CiudadComponent } from './ciudad/ciudad.component';
 import { EncomillarPipe } from './pipes/encomillar.pipe';
 import { WindDirectionPipe } from './pipes/wind-direction.pipe';
 import { InfoCiudadComponent } from './info-ciudad/info-ciudad.component';
+import { TemperaturaPipe } from './pipes/temperatura.pipe';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { InfoCiudadComponent } from './info-ciudad/info-ciudad.component';
     CiudadComponent,
     EncomillarPipe,
     WindDirectionPipe,
-    InfoCiudadComponent
+    InfoCiudadComponent,
+    TemperaturaPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
