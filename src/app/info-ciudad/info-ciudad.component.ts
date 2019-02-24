@@ -17,7 +17,12 @@ export class InfoCiudadComponent implements OnInit {
   public ciudad: Ciudad;
   public clima: ClimaCiudad;
   private codigo: string;
-  public temperatura: Temperatura;
+  public temperatura: Temperatura = {
+    min: null,
+    max: null,
+    actual: null,
+    estado: '-'
+  };
 
   constructor(
     private infoClimaService: InfoClimaService,
@@ -31,7 +36,9 @@ export class InfoCiudadComponent implements OnInit {
     this.codigo = this.route.snapshot.paramMap.get('codigo');
     this.ciudad = this.ciudadesService.obtenerCiudad(this.codigo);
     this.clima = this.infoClimaService.obtenerClima(this.codigo);
-    this.temperatura = this.temperaturaService.obtenerTemperaturaCiudad(this.codigo);
+    this.temperaturaService.obtenerTemperaturaCiudad(this.codigo).subscribe({
+      next: (apiResult) => this.temperatura = apiResult
+    });
   }
 
   public volver(): void {
