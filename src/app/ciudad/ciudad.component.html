@@ -1,8 +1,8 @@
 <div class="ciudad-item" [ngClass]="!clima.clima.oleaje ? 'incomplete' : ''">
-  <h3>
+  <h3 routerLink="/ciudad/{{ciudad.codigo}}">
     {{ ciudad.nombre | encomillar }} - <i>{{ ciudad.pais | uppercase }}</i>
-    <button (click)="editar()">{{ mostrarEdicion ? 'Ocultar' : 'Editar'}} </button>
   </h3>
+  <button (click)="editar()">{{ mostrarEdicion ? 'Ocultar' : 'Editar'}} </button>
   <div *ngIf="clima.clima.viento.velocidad">
     Viento: {{ clima | windDirection }}
   </div>

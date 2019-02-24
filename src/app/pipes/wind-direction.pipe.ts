@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {ClimaCiudad, DireccionViento} from './services/info-clima/clima';
+import {ClimaCiudad, DireccionViento} from '../services/info-clima/clima';
 
 @Pipe({
   name: 'windDirection'

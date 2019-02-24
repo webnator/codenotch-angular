@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { Autor } from '../autor';
+import { Autor } from './autor';
 
 @Component({
   selector: 'app-about',
