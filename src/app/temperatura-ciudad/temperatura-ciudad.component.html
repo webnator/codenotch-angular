@@ -1,0 +1,8 @@
+<div class="temperatura">
+  <div class="info">
+    <span><strong>Minima:</strong> {{ temperatura.min | number | temperatura }}</span>
+    <span><strong>Maxima:</strong> {{ temperatura.max | number | temperatura }}</span>
+    <span><strong>Actual:</strong> {{ temperatura.actual | number | temperatura }}</span>
+  </div>
+  <img src="http://openweathermap.org/img/w/{{ temperatura.estado }}.png"/>
+</div>

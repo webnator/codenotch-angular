@@ -4,11 +4,11 @@
   </h3>
   <button (click)="editar()">{{ mostrarEdicion ? 'Ocultar' : 'Editar'}} </button>
   <div *ngIf="clima.clima.viento.velocidad">
-    Viento: {{ clima | windDirection }}
+    Viento: {{ clima.clima.viento | windDirection }}
   </div>
 
   <div *ngIf="mostrarEdicion">
-      Nuevo nombre: <input #nombre>
-      <button (click)="cambiarNombre(nombre.value)">Cambiar</button>
-    </div>
+    Nuevo nombre: <input #nombre>
+    <button (click)="cambiarNombre(nombre.value)">Cambiar</button>
+  </div>
 </div>

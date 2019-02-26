@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Ciudad } from './ciudad';
 import { ClimaCiudad, DireccionViento } from '../services/info-clima/clima';
 import { InfoClimaService } from '../services/info-clima/info-clima.service';
@@ -11,6 +11,7 @@ import { CiudadesService } from '../services/ciudades/ciudades.service';
 })
 export class CiudadesComponent implements OnInit {
   public ciudades: Ciudad[] = [];
+  @Output() ciudadElegida = new EventEmitter<string>();
 
   constructor(private infoClimaService: InfoClimaService, private ciudadesService: CiudadesService) { }
 
@@ -35,6 +36,10 @@ export class CiudadesComponent implements OnInit {
       }
     };
     this.infoClimaService.agregarClima(clima);
+  }
+
+  public emiteCiudad(codigo: string): void {
+    this.ciudadElegida.emit(codigo);
   }
 
 }

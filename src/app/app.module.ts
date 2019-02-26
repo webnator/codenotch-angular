@@ -11,6 +11,8 @@ import { CiudadComponent } from './ciudad/ciudad.component';
 import { InfoCiudadComponent } from './info-ciudad/info-ciudad.component';
 import { ListaCiudadesModule } from './lista-ciudades/lista-ciudades.module';
 import { SurfPipesModule } from './surf-pipes/surf-pipes.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { TemperaturaCiudadComponent } from './temperatura-ciudad/temperatura-ciudad.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SurfPipesModule } from './surf-pipes/surf-pipes.module';
     AboutComponent,
     CiudadesComponent,
     CiudadComponent,
-    InfoCiudadComponent
+    InfoCiudadComponent,
+    DashboardComponent,
+    TemperaturaCiudadComponent
   ],
   imports: [
     BrowserModule,

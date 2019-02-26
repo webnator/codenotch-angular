@@ -1,0 +1,24 @@
+
+.dashboard {
+  margin: 10px 0;
+
+  .menu-izquierda {
+    width: 30%;
+    display: block;
+    position: relative;
+    float: left;
+    padding: 1%;
+    box-sizing: border-box;
+  }
+
+  .principal {
+    width: 70%;
+    display: block;
+    position: relative;
+    float: left;
+    padding: 1%;
+    box-sizing: border-box;
+  }
+}
+
+

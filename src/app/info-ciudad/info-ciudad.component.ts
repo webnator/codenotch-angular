@@ -16,29 +16,19 @@ import { TemperaturaService } from '../services/temperatura/temperatura.service'
 export class InfoCiudadComponent implements OnInit {
   public ciudad: Ciudad;
   public clima: ClimaCiudad;
-  private codigo: string;
-  public temperatura: Temperatura = {
-    min: null,
-    max: null,
-    actual: null,
-    estado: '-'
-  };
+  public codigo: string;
 
   constructor(
     private infoClimaService: InfoClimaService,
     private route: ActivatedRoute,
     private ciudadesService: CiudadesService,
-    private location: Location,
-    private temperaturaService: TemperaturaService
+    private location: Location
   ) { }
 
   ngOnInit() {
     this.codigo = this.route.snapshot.paramMap.get('codigo');
     this.ciudad = this.ciudadesService.obtenerCiudad(this.codigo);
     this.clima = this.infoClimaService.obtenerClima(this.codigo);
-    this.temperaturaService.obtenerTemperaturaCiudad(this.codigo).subscribe({
-      next: (apiResult) => this.temperatura = apiResult
-    });
   }
 
   public volver(): void {

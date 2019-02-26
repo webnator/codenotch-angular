@@ -1,4 +1,3 @@
 <div>
-  <h1>Ciudades</h1>
-  <app-ciudad *ngFor="let ciudad of ciudades" [ciudad]="ciudad"></app-ciudad>
+  <app-ciudad *ngFor="let ciudad of ciudades" [ciudad]="ciudad" (click)="emiteCiudad(ciudad.codigo)"></app-ciudad>
 </div>

@@ -3,13 +3,13 @@ export class ClimaCiudad {
   clima: Clima;
 }
 
-class Clima {
+export class Clima {
   oleaje: number;
   periodo: number;
   viento: Viento;
 }
 
-class Viento {
+export class Viento {
   velocidad: number;
   direccion: DireccionViento;
 }

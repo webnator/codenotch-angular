@@ -1,0 +1,21 @@
+<div class="dashboard">
+  <div class="menu-izquierda">
+    <app-ciudades (ciudadElegida)="eligeCiudad($event)"></app-ciudades>
+  </div>
+
+  <div class="principal" *ngIf="ciudad">
+    <h2>{{ ciudad.nombre }}</h2>
+    <span *ngIf="!clima.oleaje"> Aún no hay información para esta ciudad </span>
+    <div *ngIf="clima.oleaje">
+      Oleaje: {{ clima.oleaje + 'mts' }} <br/>
+      Periodo: {{ clima.periodo + 'segs' }} <br/>
+      Viento: {{ clima.viento | windDirection }}
+
+      <br/>
+      <app-temperatura-ciudad [ciudad]="ciudad.codigo"></app-temperatura-ciudad>
+    </div>
+
+  </div>
+</div>
+
+
