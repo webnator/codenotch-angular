@@ -23,6 +23,7 @@ export class CiudadComponent implements OnInit {
   public cambiarNombre(nombre: string): void {
     if (nombre.trim() !== '') {
       this.ciudad.nombre = nombre;
+      this.editar();
     }
   }
 

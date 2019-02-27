@@ -1,4 +1,4 @@
-<div class="ciudad-item" [ngClass]="!clima.clima.oleaje ? 'incomplete' : ''">
+<div class="ciudad-item" [ngClass]="!clima.clima.oleaje ? 'incomplete' : ''" matRipple>
   <h3 routerLink="/ciudad/{{ciudad.codigo}}">
     {{ ciudad.nombre | encomillar }} - <i>{{ ciudad.pais | uppercase }}</i>
   </h3>
@@ -8,7 +8,11 @@
   </div>
 
   <div *ngIf="mostrarEdicion">
-    Nuevo nombre: <input #nombre>
-    <button (click)="cambiarNombre(nombre.value)">Cambiar</button>
+    <mat-form-field>
+      <input matInput placeholder="Nuevo nombre" #nombre />
+      <button mat-button matSuffix mat-icon-button (click)="cambiarNombre(nombre.value)">
+        <mat-icon>send</mat-icon>
+      </button>
+    </mat-form-field>
   </div>
 </div>
