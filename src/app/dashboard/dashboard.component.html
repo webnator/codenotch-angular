@@ -1,9 +1,10 @@
-<div class="dashboard">
-  <div class="menu-izquierda">
+
+<div class="row">
+  <div class="col-md-3 menu-izquierda">
     <app-ciudades (ciudadElegida)="eligeCiudad($event)"></app-ciudades>
   </div>
 
-  <div class="principal" *ngIf="ciudad">
+  <div class="col-md-9 principal" *ngIf="ciudad">
     <h2>{{ ciudad.nombre }}</h2>
     <span *ngIf="!clima.oleaje"> Aún no hay información para esta ciudad </span>
     <div *ngIf="clima.oleaje">
@@ -17,5 +18,4 @@
 
   </div>
 </div>
-
 
