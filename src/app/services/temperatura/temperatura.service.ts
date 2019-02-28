@@ -29,6 +29,7 @@ export class TemperaturaService {
   }
 
   private extractData(apiResult: any): Temperatura {
+    console.log(apiResult);
     return {
       estado: apiResult.weather[0].icon,
       min: apiResult.main.temp_min,
