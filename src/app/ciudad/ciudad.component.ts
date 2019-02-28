@@ -1,8 +1,7 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Ciudad } from '../ciudades/ciudad';
 import { InfoClimaService } from '../services/info-clima/info-clima.service';
 import { ClimaCiudad } from '../services/info-clima/clima';
-import { CiudadesService } from '../services/ciudades/ciudades.service';
 
 @Component({
   selector: 'app-ciudad',
@@ -14,7 +13,7 @@ export class CiudadComponent implements OnInit {
   public clima: ClimaCiudad;
   public mostrarEdicion = false;
 
-  constructor(private infoClimaService: InfoClimaService, private ciudadesService: CiudadesService) { }
+  constructor(private infoClimaService: InfoClimaService) { }
 
   ngOnInit() {
     this.clima = this.infoClimaService.obtenerClima(this.ciudad.codigo);

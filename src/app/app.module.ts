@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule, MatButtonModule, MatIconModule, MatRippleModule } from '@angular/material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,7 +15,6 @@ import { ListaCiudadesModule } from './lista-ciudades/lista-ciudades.module';
 import { SurfPipesModule } from './surf-pipes/surf-pipes.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TemperaturaCiudadComponent } from './temperatura-ciudad/temperatura-ciudad.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
